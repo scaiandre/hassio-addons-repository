@@ -1,6 +1,6 @@
 {
   "name": "Lupusec2Mqtt Edge",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "slug": "Lupusec2Mqtt-edge",
   "description": "Connect your Lupusec Alarm system to HomeAssistant by an MQTT integration",
   "startup": "application",
@@ -34,5 +34,4 @@
     "Serilog:MinimumLevel:Default": "str?",
     "MotionSensor:DetectionDuration": "int(1,)"
   },
-  "image": "cyberdns/lupusec2mqtt_hassaddon_{arch}"
 }
