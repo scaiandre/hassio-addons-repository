@@ -33,5 +33,5 @@
     "Lupusec:Password": "str",
     "Serilog:MinimumLevel:Default": "str?",
     "MotionSensor:DetectionDuration": "int(1,)"
-  },
+  }
 }
