@@ -7,6 +7,8 @@ RUN apt-get install -y git
 
 WORKDIR "/src"
 RUN git clone https://github.com/scaiandre/Lupusec2Mqtt
+WORKDIR "/src/Lupusec2Mqtt"
+RUN git checkout feature/energy
 WORKDIR "/src/Lupusec2Mqtt/src"
 RUN ls
 RUN dotnet restore "Lupusec2Mqtt/Lupusec2Mqtt.csproj"
