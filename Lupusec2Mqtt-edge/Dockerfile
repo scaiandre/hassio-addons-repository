@@ -9,7 +9,7 @@ WORKDIR "/src"
 RUN git clone https://github.com/scaiandre/Lupusec2Mqtt
 WORKDIR "/src/Lupusec2Mqtt/src"
 RUN ls
-RUN git checkout feature/energy
+RUN git fetch && git checkout feature/energy
 RUN dotnet restore "Lupusec2Mqtt/Lupusec2Mqtt.csproj"
 COPY . .
 WORKDIR "/src/Lupusec2Mqtt/src/Lupusec2Mqtt"
