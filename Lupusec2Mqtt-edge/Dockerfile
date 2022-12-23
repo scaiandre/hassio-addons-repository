@@ -9,6 +9,7 @@ RUN apt-get install -y git
 WORKDIR "/src"
 RUN git clone https://github.com/scaiandre/Lupusec2Mqtt
 WORKDIR "/src/Lupusec2Mqtt/src"
+RUN git switch feature/integration
 RUN ls
 RUN dotnet restore "Lupusec2Mqtt/Lupusec2Mqtt.csproj"
 COPY . .
