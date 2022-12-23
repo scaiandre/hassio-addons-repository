@@ -7,7 +7,7 @@ RUN apt-get update
 RUN apt-get install -y git
 
 WORKDIR "/src"
-RUN git clone -b dev --single-branch https://github.com/CyberDNS/Lupusec2Mqtt/
+RUN git clone -b feature/integration --single-branch https://github.com/scaiandre/Lupusec2Mqtt.git
 WORKDIR "/src/Lupusec2Mqtt/src"
 RUN ls
 RUN git fetch && git checkout feature/integration
