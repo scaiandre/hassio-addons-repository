@@ -1,5 +1,4 @@
-ARG BASE_TAG
-FROM mcr.microsoft.com/dotnet/core/aspnet:$BASE_TAG AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
@@ -11,6 +10,7 @@ RUN git clone https://github.com/scaiandre/Lupusec2Mqtt
 WORKDIR "/src/Lupusec2Mqtt/src"
 RUN git switch feature/integration
 RUN ls
+RUN git fetch && git checkout feature/energy
 RUN dotnet restore "Lupusec2Mqtt/Lupusec2Mqtt.csproj"
 COPY . .
 WORKDIR "/src/Lupusec2Mqtt/src/Lupusec2Mqtt"
