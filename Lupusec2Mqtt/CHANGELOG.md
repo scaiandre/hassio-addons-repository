@@ -1,5 +1,34 @@
 # Changelog
 
+## 2.0.1
+
+ - Using the correct .NET 6 docker images for different platforms
+
+## 2.0.0
+
+ - Upgrade to .NET 6
+ - Added alarm panel vacation mode (mapped to home 3)
+ - Some changes in logging
+
+## 1.6.0
+
+- Added XT2 opener contact (Credits: ChrisKeck)
+- Added XT2 wall switch (Credits: ChrisKeck)
+- Logging ignored devices (Credits: ChrisKeck)
+- Refactoring / Bugfixes / Robustness (Credits: ChrisKeck)
+
+## 1.5.0
+
+- Added Temperature/Humidity sensor (Credits: scaiandre)
+
+## 1.4.1
+
+- Added Nuki door lock (Credits: maionaise)
+
+## 1.3.0
+
+- Light added with possiblity to turn on and off (No hue, color, dim implemented yet)
+
 ## 1.2.0
 
 - Power switch added with discovery, state and set

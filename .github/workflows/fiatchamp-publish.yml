@@ -1,4 +1,4 @@
-name: 'Publish Lupusec2Mqtt'
+name: 'Publish FiatChamp'
 
 on:
   workflow_dispatch:
@@ -8,15 +8,14 @@ on:
         required: true
         default: '0.1.0'
       dockerfile:
-        description: 'Location of the dockerfile (for prod use Lupusec2Mqtt/Dockerfile)'     
+        description: 'Location of the dockerfile'     
         required: true
-        default: 'Lupusec2Mqtt-edge/Dockerfile'
+        default: 'FiatChamp-edge/Dockerfile'
 
 run-name: ${{ inputs.version }} based on ${{ inputs.dockerfile }}
 
 env:
-  # TODO: Change variable to your image's name.
-  IMAGE_NAME: lupusec2mqtt_hassaddon
+  IMAGE_NAME: fiatchamp_hassaddon
 
 jobs:
   # Push image to GitHub Packages.
@@ -27,13 +26,13 @@ jobs:
       matrix:
         include:
           - arch: 'amd64'
-            base_tag: '6.0-bullseye-slim'
+            base_tag: '7.0-bullseye-slim'
           - arch: 'armhf'
-            base_tag: '6.0-bullseye-slim-arm32v7'
+            base_tag: '7.0-bullseye-slim-arm32v7'
           - arch: 'armv7'
-            base_tag: '6.0-bullseye-slim-arm32v7'
+            base_tag: '7.0-bullseye-slim-arm32v7'
           - arch: 'aarch64'
-            base_tag: '6.0-bullseye-slim-arm64v8'
+            base_tag: '7.0-bullseye-slim-arm64v8'
     steps:
       - uses: actions/checkout@v2
 

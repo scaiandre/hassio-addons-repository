@@ -1,12 +1,13 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+ARG BASE_TAG
+FROM mcr.microsoft.com/dotnet/aspnet:$BASE_TAG AS base
 WORKDIR /app
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 RUN apt-get update
 RUN apt-get install -y git
 
 WORKDIR "/src"
-RUN git clone https://github.com/scaiandre/Lupusec2Mqtt
+RUN git clone -b dev --single-branch https://github.com/CyberDNS/Lupusec2Mqtt/
 WORKDIR "/src/Lupusec2Mqtt/src"
 RUN ls
 RUN git fetch && git checkout feature/integration
