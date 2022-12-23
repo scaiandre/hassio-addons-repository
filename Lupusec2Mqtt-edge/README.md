@@ -29,7 +29,7 @@ Make your Lupusec XT2 (and compatible) Alarm System available on an MQTT Broker 
 ## Getting started
 
 1. Add it as custom repository directly in the Homeassistant UI, through the Supervisor page > Addon Store > Point Menu on the right > Repositories.  
-   The URI is: https://github.com/CyberDNS/hassio-addons-repository
+   The URI is: https://github.com/scaiandre/hassio-addons-repository
 2. Reload the repositories if necessary 
 3. Install the Lupusec2Mqtt plugin
 4. Configure
