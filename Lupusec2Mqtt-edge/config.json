@@ -33,6 +33,5 @@
     "Lupusec:Password": "str",
     "Serilog:MinimumLevel:Default": "str?",
     "MotionSensor:DetectionDuration": "int(1,)"
-  },
-  "image": "cyberdns/lupusec2mqtt_hassaddon_{arch}"
+  }
 }
