@@ -10,7 +10,6 @@ WORKDIR "/src"
 RUN git clone -b feature/integration --single-branch https://github.com/scaiandre/Lupusec2Mqtt.git
 WORKDIR "/src/Lupusec2Mqtt/src"
 RUN ls
-RUN git fetch && git checkout feature/integration
 RUN dotnet restore "Lupusec2Mqtt/Lupusec2Mqtt.csproj"
 COPY . .
 WORKDIR "/src/Lupusec2Mqtt/src/Lupusec2Mqtt"
